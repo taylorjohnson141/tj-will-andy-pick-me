@@ -4,6 +4,11 @@ var userInput  =document.querySelector('.user-input')
 var question  =document.querySelector('.question')
 var answer  =document.querySelector('.answer')
 var eightBall = document.querySelector('.eight-ball')
+var section = document.querySelector('section')
+var clearButton = document.querySelector('.clear')
+
+answerButton.disabled = true;
+clearButton.disabled = true;
 var output =[
 'It is certain.',
 'It is decidedly so.',
@@ -28,29 +33,57 @@ var output =[
 
 var currentOutput;
 
-answerButton.addEventListener('click',function(){
+section.addEventListener('keyup', checkInput);
+
+clearButton.addEventListener('click',function() {
+  toggleHiddenClass(eightBall)
+  toggleHiddenClass(question)
+  toggleHiddenClass(answer)
+  clearButton.disabled =true
+})
+
+answerButton.addEventListener('click',function() {
   createOutput()
   toggleHiddenClass(eightBall)
   toggleHiddenClass(question)
   toggleHiddenClass(answer)
   addCurrentOutputtoHtml()
   clearUserInput()
+  answerButton.disabled = true;
+
+  enableClearButton()
 })
 
 function createOutput(){
   var newOutput = new Output(userInput.value,getRandomOutput())
   currentOutput = newOutput
 }
-function getRandomOutput(){
-return output[Math.floor(Math.random() * output.length)]
+
+function getRandomOutput() {
+  return output[Math.floor(Math.random() * output.length)];
 }
-function addCurrentOutputtoHtml(){
-  question.innerText = currentOutput.question
-  answer.innerText = currentOutput.answer
+
+function addCurrentOutputtoHtml() {
+  question.innerText = currentOutput.question;
+  answer.innerText = currentOutput.answer;
 }
-function toggleHiddenClass(element){
-element.classList.toggle('hidden')
+
+function toggleHiddenClass(element) {
+  element.classList.toggle('hidden');
 }
-function clearUserInput(){
-  userInput.value = ''
+
+function clearUserInput() {
+  userInput.value = '';
+}
+
+function checkInput() {
+  if (userInput.value === "" ) {
+    answerButton.disabled = true;
+  }else {
+    answerButton.disabled = false;
+
+  }
+}
+function enableClearButton(){
+  clearButton.disabled = false;
 }
