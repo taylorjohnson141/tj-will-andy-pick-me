@@ -1,5 +1,42 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Life Savers', serif; */
+body{
+  padding-left: 80px;
+  padding-right: 8git 0px;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+}
+h1{
+  display: block;
+  text-align: center;
+  color:#2B4E80;
+  font-family: 'Life Savers', serif;
+  font-size: 3em;
+}
+section{
+  background-color:#E6ECF4;
+  position: relative;
+
+}
+.eight-ball{
+  height: 7em;
+}
+.answer{
+display: block;
+}
+.clear{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 5px;
+}
+.woody{
+  height: 20em;
+}
 
 /*
 COLORS
