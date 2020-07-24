@@ -19,10 +19,10 @@ h1{
 section{
   background-color:#E6ECF4;
   position: relative;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .eight-ball{
@@ -34,11 +34,23 @@ align-items: center;
   width: 90%;
   margin : 0 0 10px 0;
   padding: 8px;
+  background-color:#2B4E80;
+  color:#E6ECF4;
+  font-size: 1.2em;
+}
+.answer:hover{
+  background-color:  #1C3455;
+}
+.answer:disabled{
+  background-color: #607AA0;
 }
 .input{
   width: 85%;
   margin : 15px 0 10px 0;
   padding: 8px;
+  text-align: center;
+  color:#2B4E80;
+  font-size: 1.2em;
 
 }
 .clear{
@@ -46,11 +58,18 @@ align-items: center;
   right: 20px;
   bottom: 20px;
   padding: 5px;
+  color: #E6ECF4;
+  background-color: #DE4841;
 }
 .woody{
   height: 20em;
 }
-
+.clear:disabled{
+  background-color: #D0CDCD
+}
+.answer:disabled{
+background-color:#607AA0;
+}
 /*
 COLORS
 H1, Get answer button, text in input field: #2B4E80;
