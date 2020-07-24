@@ -1,6 +1,75 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Life Savers', serif; */
+body{
+  padding-left: 200px;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 
+}
+h1{
+  display: block;
+  text-align: center;
+  color:#2B4E80;
+  font-family: 'Life Savers', serif;
+  font-size: 3em;
+}
+section{
+  background-color:#E6ECF4;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eight-ball{
+  margin-top: 10px;
+  width: 8em;
+  height: 8em;
+}
+.answer{
+  width: 90%;
+  margin : 0 0 10px 0;
+  padding: 8px;
+  background-color:#2B4E80;
+  color:#E6ECF4;
+  font-size: 1.2em;
+}
+.answer:hover{
+  background-color:  #1C3455;
+}
+.answer:disabled{
+  background-color: #607AA0;
+}
+.input{
+  width: 85%;
+  margin : 15px 0 10px 0;
+  padding: 8px;
+  text-align: center;
+  color:#2B4E80;
+  font-size: 1.2em;
+
+}
+.clear{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 5px;
+  color: #E6ECF4;
+  background-color: #DE4841;
+}
+.woody{
+  height: 20em;
+}
+.clear:disabled{
+  background-color: #D0CDCD
+}
+.answer:disabled{
+background-color:#607AA0;
+}
 /*
 COLORS
 H1, Get answer button, text in input field: #2B4E80;
