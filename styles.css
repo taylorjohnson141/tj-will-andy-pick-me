@@ -73,6 +73,9 @@ section{
 .answer:disabled{
 background-color:#607AA0;
 }
+.hidden{
+  display: none;
+}
 /*
 COLORS
 H1, Get answer button, text in input field: #2B4E80;
